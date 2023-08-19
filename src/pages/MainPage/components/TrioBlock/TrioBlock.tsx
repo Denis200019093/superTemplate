@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 
 import blueImg from "assets/blue.png";
 import orangeImg from "assets/orange.png";

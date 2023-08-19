@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 
 import premiumImg from "assets/premium.png";
 import dontknowImg from "assets/dontknow.png";
