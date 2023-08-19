@@ -1,0 +1,42 @@
+@import 'SCSS/_mixins.scss';
+
+.product-slide {
+  border: 2px solid #FFF;
+  margin-right: 20px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__body {
+    @include adaptiv-value('padding-left', 30, 10, 1);
+    @include adaptiv-value('padding-right', 30, 10, 1);
+  }
+
+  &__info {
+    h6 {
+      @include adaptiv-value('padding-top', 30, 10, 1);
+    }
+
+    p {
+      @include adaptiv-value('padding-top', 43, 13, 1);
+      @include adaptiv-value('padding-bottom', 59, 5, 1);
+      color: rgba(0, 0, 0, 0.50);
+      font-family: sans-serif, PP Neue Montreal;
+      font-size: 14px;
+      line-height: 130%;
+    }
+
+  }
+
+  &__price {
+    align-items: center;
+
+    img {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 1;
+    }
+  }
+}

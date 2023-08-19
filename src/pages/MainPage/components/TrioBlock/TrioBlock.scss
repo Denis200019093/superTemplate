@@ -1,0 +1,64 @@
+@import "SCSS/_mixins.scss";
+
+.trio-block {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include adaptiv-value("margin-top", 75, 44, 1);
+  @include adaptiv-value("margin-bottom", 75, 44, 1);
+
+  h3 {
+    flex: 1;
+    line-height: 110%;
+    @include breakpoint(lg, max) {
+      flex-basis: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__descriptions {
+    flex: 3;
+  }
+
+  &__first-description {
+    flex-basis: 40%;
+    button {
+      @include adaptiv-value("margin-top", 60, 14, 1);
+    }
+  }
+
+  &__second-description {
+    flex-basis: 40%;
+  }
+}
+
+.sertification-container {
+  display: flex;
+  margin-top: 82px;
+  @include adaptiv-value("margin-top", 82, 25, 1);
+  span {
+    flex: 1;
+
+    @include breakpoint(xl, max) {
+      display: none;
+    }
+  }
+
+  &__sertificates {
+    display: flex;
+    overflow-x: auto;
+    @include adaptiv-value("gap", 64, 5, 1);
+    flex: 3;
+
+    img {
+      width: 100%;
+      height: auto;
+
+      // @include breakpoint(lg, max) {
+      //   height: 300px;
+      // }
+    }
+  }
+}
+
+// @include adaptiv-value("margin-bottom", 117, 50, 1);

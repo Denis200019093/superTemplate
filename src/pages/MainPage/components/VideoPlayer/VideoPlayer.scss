@@ -1,0 +1,31 @@
+@import "SCSS/_variables.scss";
+
+.video-player-container {
+  position: relative;
+  margin-top: 85px;
+
+  &__video {
+    display: flex;
+    justify-content: center;
+  }
+
+  .play-button {
+    position: absolute;
+    top: calc(50% - 32px);
+    left: calc(50% - 32px);
+
+    width: 64px;
+    height: 64px;
+
+    background-color: $main-bg;
+    border-radius: 50%;
+
+    z-index: 1;
+  }
+
+  video {
+    width: 100%;
+    height: auto;
+    max-height: 466px;
+  }
+}

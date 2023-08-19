@@ -1,0 +1,34 @@
+@import "SCSS/_variables.scss";
+@import "SCSS/_mixins.scss";
+
+.approach-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+
+  padding: 80px 69px;
+  background-color: $secondary-bg;
+
+  @include breakpoint(md, max) {
+    padding: 40px 30px;
+    gap: 20px;
+  }
+
+  h6 {
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+
+  &__premium {
+    flex: 1;
+  }
+
+  &__dontknow {
+    flex: 1;
+  }
+
+  &__save {
+    flex: 1;
+  }
+}

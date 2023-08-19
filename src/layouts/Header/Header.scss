@@ -1,0 +1,101 @@
+@import "SCSS/_mixins.scss";
+
+.header {
+  align-items: center;
+  overflow: hidden;
+
+  @include adaptiv-value("height", 107, 56, 1);
+
+  .show {
+    transform: translateY(0) !important;
+    transition: 0.3s;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 1px;
+    right: 7px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .mobile-navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transform: translateY(-100%);
+    transition: 0.3s;
+    background-color: #fff;
+    padding: 0 10px;
+    overflow-x: auto;
+
+    width: 100%;
+
+    @include breakpoint(md, min) {
+      display: none;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 100%;
+      @include adaptiv-value("height", 107, 56, 1);
+
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &__logo-burder {
+    display: flex;
+    align-items: center;
+  }
+
+  &__burger {
+    display: none;
+    margin-right: 10px;
+    font-size: 30px;
+
+    @include breakpoint(md, max) {
+      display: block;
+    }
+  }
+
+  &__navigation {
+    @include breakpoint(md, max) {
+      display: none;
+    }
+    ul {
+      display: flex;
+      font-weight: 500;
+      color: #000;
+      @include adaptiv-value("font-size", 16, 14, 1);
+      @include adaptiv-value("gap", 39, 12, 1);
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+  }
+
+  &__select {
+    display: flex;
+    gap: 8px;
+
+    @include adaptiv-value("margin-right", 30, 4, 1);
+  }
+
+  &__cart {
+    width: 40px;
+    height: 40px;
+  }
+}

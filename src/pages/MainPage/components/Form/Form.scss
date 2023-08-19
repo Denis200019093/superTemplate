@@ -1,0 +1,32 @@
+@import "SCSS/_mixins.scss";
+@import "SCSS/_variables.scss";
+
+.my-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+  width: 100%;
+  form {
+    display: flex;
+    align-items: center;
+
+    input {
+      padding-left: 15px;
+      border-radius: 23px 0 0 23px;
+      outline: none;
+      border: none;
+      @include adaptiv-value("width", 450, 200, 1);
+      height: 60px;
+    }
+
+    button {
+      height: 60px;
+      @include adaptiv-value("padding-left", 44, 10, 1);
+      @include adaptiv-value("padding-right", 44, 10, 1);
+      background-color: $secondary-bg;
+      border: none;
+      border-radius: 0 23px 23px 0;
+      border-left: 1px solid lightgray;
+    }
+  }
+}

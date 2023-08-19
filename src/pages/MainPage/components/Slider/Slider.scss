@@ -1,0 +1,38 @@
+@import "SCSS/_mixins.scss";
+@import "SCSS/_variables.scss";
+
+.slider {
+  position: relative;
+  width: 100%;
+  @include adaptiv-value("margin-bottom", 85, 25, 1);
+  padding-left: 30px;
+
+  &__head {
+    display: flex;
+    // width: 50%;
+    margin-bottom: 60px;
+    @include adaptiv-value("margin-bottom", 60, 10, 1);
+  }
+
+  &__arrows {
+    position: relative;
+    transform: translateX(-30px);
+
+    .prev-arrow {
+      img {
+        background-color: $secondary-bg;
+        padding: 11px;
+        border-radius: 50%;
+      }
+    }
+
+    .next-arrow {
+      img {
+        background-color: $secondary-bg;
+        padding: 11px;
+        margin-left: 12px;
+        border-radius: 50%;
+      }
+    }
+  }
+}

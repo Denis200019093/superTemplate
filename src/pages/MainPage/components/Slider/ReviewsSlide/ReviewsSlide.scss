@@ -1,0 +1,22 @@
+@import "SCSS/_mixins.scss";
+
+.reviews-slide {
+  padding: 30px;
+
+  margin-right: 20px;
+  max-height: 350px;
+
+  @include breakpoint(lg, max) {
+    padding: 15px;
+  }
+
+  &__head {
+    margin-bottom: 22px;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+}

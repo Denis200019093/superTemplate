@@ -1,0 +1,69 @@
+@import "SCSS/_mixins.scss";
+@import "SCSS/_variables.scss";
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  @include adaptiv-value("margin-top", 112, 50, 1);
+
+  padding: 55px 30px 30px 30px;
+  background-color: $secondary-bg;
+
+  h6 {
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  li {
+    margin-bottom: 16px;
+    color: $opacity-color;
+  }
+
+  &__first-block {
+    flex-grow: 1;
+
+    p {
+      font-size: 16px;
+      margin-top: 39px;
+      margin-bottom: 60px;
+      max-width: 256px;
+    }
+
+    button {
+      @include adaptiv-value("margin-bottom", 150, 15, 1);
+    }
+  }
+
+  &__second-block {
+    flex-grow: 1;
+  }
+
+  &__third-block {
+    flex-grow: 1;
+    flex-direction: column;
+  }
+
+  &__fourth-block {
+    flex-grow: 1;
+
+    ul {
+      li {
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 45px;
+          margin-right: 8px;
+        }
+      }
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 31px;
+      margin-top: 28.5px;
+    }
+  }
+}
